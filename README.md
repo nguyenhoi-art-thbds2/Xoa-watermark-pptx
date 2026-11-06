@@ -8,8 +8,9 @@ Phát triển bởi thầy Hợi · Trường Tiểu học Bảo Đài 2 - TP B�
 
 - Chọn **cả thư mục** chứa file `.pptx` (Chrome/Edge) hoặc chọn từng file. Kết quả lưu vào thư mục con `da_xoa_watermark`.
 - **Cường độ xóa** từ 0 đến 100%. Mức 100% xóa sạch toàn bộ vùng đã chọn.
+- **Giao diện 3 bước** (Chọn file, Chỉnh vùng, Xóa), hỗ trợ **kéo thả file .pptx**, chế độ sáng/tối và điện thoại.
 - **Cửa sổ xem trước**: kéo chuột để vẽ hoặc di chuyển vùng xóa, xem ảnh Trước/Sau, chuyển qua lại giữa các slide.
-- Có nút **Bắt đầu**, thanh tiến độ và nút **Xóa file khác** để làm đợt mới.
+- Có nút **Xóa watermark**, thanh tiến độ và nút **Xóa file khác** để làm đợt mới.
 - Tự xử lý ảnh nền tối (viền thiết bị màu đen) và xóa cả phần watermark nằm trong kênh trong suốt (alpha) của ảnh PNG.
 
 ## Cách dùng
@@ -68,3 +69,5 @@ Nghĩa là các file đi kèm chưa lên repo hoặc đặt sai chỗ. Bản nà
 
 - Cần trình duyệt có hỗ trợ chọn thư mục (Chrome, Edge). Trình duyệt khác vẫn dùng được bằng "Chọn từng file", kết quả sẽ được tải xuống với tiền tố `sach_`.
 - Thư viện [JSZip](https://stuk.github.io/jszip/) (MIT/GPLv3) được dùng để đọc và ghi file `.pptx`.
+
+- Giao diện dùng phông Be Vietnam Pro tải từ Google Fonts; nếu không có mạng, trình duyệt tự dùng phông hệ thống và công cụ vẫn chạy bình thường.
