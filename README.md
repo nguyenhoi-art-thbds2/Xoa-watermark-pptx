@@ -25,7 +25,7 @@ Phát triển bởi thầy Hợi · Trường Tiểu học Bảo Đài 2 - TP B�
 **Cách 1: tải lên bằng giao diện web (không cần dùng lệnh)**
 
 1. Đăng nhập GitHub, bấm **New repository**, đặt tên (ví dụ `xoa-watermark-pptx`), chọn **Public**, bấm **Create repository**.
-2. Bấm **uploading an existing file**, kéo thả **toàn bộ nội dung** của thư mục này (gồm `index.html`, `css`, `js`, `assets`, `.nojekyll`, `README.md`) vào, rồi bấm **Commit changes**.
+2. Bấm **uploading an existing file**, kéo thả **toàn bộ nội dung** của thư mục này (gồm `index.html`, `.nojekyll`, `README.md`) vào, rồi bấm **Commit changes**.
    Lưu ý: `index.html` phải nằm ở thư mục gốc của repo, không nằm trong thư mục con.
 3. Vào **Settings → Pages**. Ở mục **Build and deployment**, chọn **Source: Deploy from a branch**, **Branch: main**, thư mục **/(root)**, bấm **Save**.
 4. Chờ 1 đến 2 phút. Địa chỉ trang sẽ là `https://<tên-tài-khoản>.github.io/<tên-repo>/`.
@@ -48,19 +48,21 @@ Sau đó làm bước 3 và 4 ở Cách 1.
 ## Cấu trúc thư mục
 
 ```
-index.html          Giao diện
-css/style.css       Kiểu dáng
-js/app.js           Xử lý chính (xóa watermark, xem trước, tiến độ)
-js/jszip.min.js     Thư viện JSZip để đọc/ghi file .pptx (đã kèm sẵn, không cần mạng)
-assets/             Logo và biểu tượng của trang
-.nojekyll           Báo GitHub Pages phục vụ file nguyên trạng
+index.html   Toàn bộ công cụ trong MỘT file (giao diện, kiểu dáng, mã xử lý, thư viện JSZip, logo đều nhúng sẵn)
+.nojekyll    Báo GitHub Pages phục vụ file nguyên trạng
+README.md    Hướng dẫn
 ```
+
+Vì mọi thứ nằm trong `index.html` nên chỉ cần `index.html` ở thư mục gốc của repo là trang chạy đủ, không phụ thuộc thư mục `css`, `js`, `assets`.
+
+## Nếu trang hiện chữ thô, không có màu sắc, logo vỡ
+
+Nghĩa là các file đi kèm chưa lên repo hoặc đặt sai chỗ. Bản này không còn gặp lỗi đó. Nếu vẫn lỗi: kiểm tra `index.html` đang ở thư mục gốc repo (không nằm trong thư mục con), rồi bấm Ctrl+F5 để xóa bộ nhớ đệm.
 
 ## Tùy chỉnh
 
-- **Vùng xóa mặc định** nằm ở bốn ô `bx1`, `by1`, `bx2`, `by2` trong `index.html` (tọa độ pixel trên ảnh 1376×768), và ở nút "Đặt lại mặc định" trong `js/app.js`.
+- **Vùng xóa mặc định** nằm ở bốn ô `bx1`, `by1`, `bx2`, `by2` trong `index.html` (tọa độ pixel trên ảnh 1376×768), và ở nút "Đặt lại mặc định" trong phần script của `index.html`.
 - Công cụ chỉ xử lý ảnh PNG kích thước **1376×768**. Ảnh khác kích thước được bỏ qua.
-- Muốn đổi logo: thay các file trong thư mục `assets/` (giữ nguyên tên file).
 
 ## Ghi chú
 
